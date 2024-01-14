@@ -1,0 +1,6 @@
+<h1><%= @bachelorette.name %></h1>
+
+<ul>
+  <li>Season: <%= @bachelorette.season_number %> - <%= @bachelorette.description %></li>
+  <li>Contestants: <%= link_to "#{@bachelorette.name}'s Contestants", "/bachelorettes/#{@bachelorette.id}/contestants" %>
+</ul>
