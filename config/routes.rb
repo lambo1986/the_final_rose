@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :bachelorettes, only: [:show] do
     resources :contestants, controller: 'bachelorette_contestants', only: [:index, :show]
     end
-    resources :outings, only: [:show]
-  end
-
+  resources :outings, only: [:show]
+  resources :outing_contestants, only: [:destroy]
+end

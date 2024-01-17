@@ -1,11 +1,27 @@
 <h1><%= @bachelorette.name %>'s Contestants</h1>
 
+<section id='hometowns'>
+
+<h3>Contestant Hometowns: 
+  <% @bachelorette.contestants_hometowns.each do |town| %>
+    <ul>
+      <li><%= town %></li>
+    </ul>
+  <% end %>
+</h3>
+
+</section>
+
+================================================================
+
 <% @bachelorette.contestants.each do |contestant| %>
   <h2>Name: <%= link_to "#{contestant.name}", "/bachelorettes/#{@bachelorette.id}/contestants/#{contestant.id}" %></h2>
     <ul>
       <li>Age: <%= contestant.age %></li>
       <li>Hometown: <%= contestant.hometown %></li>
     </ul>
+
 ----------------------------------------------------------------
+
 <% end %>
 

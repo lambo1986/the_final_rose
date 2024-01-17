@@ -6,7 +6,8 @@
 
 <h2>Contestants:</h2>
 <% @outing.contestants.each do |contestant| %>
-  <h3><%= contestant.name %></h3>
+  <h3>Name: <%= contestant.name %></h3>
+    <%= link_to "Remove #{contestant.name} from #{@outing.name}", outing_contestant_path(@outing, contestant), method: :delete, data: { confirm: 'Are you sure?' }, remote: true %>
 <% end %>
 
 
